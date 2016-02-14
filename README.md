@@ -61,7 +61,7 @@ function clbk( error, results ) {
 ```
 
 
-#### fetch.factory( options, clbk )
+#### fetch.factory( filepath, repos, clbk )
 
 Creates a reusable `function`.
 
