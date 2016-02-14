@@ -21,7 +21,7 @@ var fetch = require( 'github-fetch-file' );
 <a name="fetch"></a>
 #### fetch( filepath, repos, clbk )
 
-Fetches a `file` from one or more public Github repositories.
+Fetches a `file` from one or more __public__ Github repositories.
 
 ``` javascript
 // List of repository slugs (username|org/repo):
