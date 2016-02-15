@@ -2,7 +2,7 @@ Fetch File
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Fetch a file from one or more public Gitub repositories.
+> Fetch a file from one or more public Github repositories.
 
 
 ## Installation
