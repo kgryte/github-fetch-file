@@ -32,7 +32,7 @@ tape( 'function returns an error to a provided callback if an error is encounter
 	});
 
 	opts = copy( defaults );
-	resolve( 'README.md', repos, opts, done );
+	resolve( 'README.md', [repos[0]], opts, done );
 
 	function request( opts, clbk ) {
 		setTimeout( onTimeout, 0 );
