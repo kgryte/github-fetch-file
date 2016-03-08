@@ -1,6 +1,6 @@
 {
   "name": "github-fetch-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch a file from one or more public Github repositories.",
   "author": {
     "name": "Athan Reines",
