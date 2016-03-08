@@ -51,6 +51,34 @@ tape( 'function returns an error to a provided callback if an error is encounter
 	}
 });
 
+tape( 'function returns an error to a provided callback if an error is encountered when fetching a file (callback only called once)', function test( t ) {
+	var resolve;
+	var opts;
+
+	resolve = proxyquire( './../lib/resolve.js', {
+		'./request.js': request
+	});
+
+	opts = copy( defaults );
+	resolve( 'README.md', repos, opts, done );
+
+	function request( opts, clbk ) {
+		setTimeout( onTimeout, 0 );
+		function onTimeout() {
+			clbk({
+				'status': 500,
+				'message': 'bad request'
+			});
+		}
+	}
+
+	function done( error ) {
+		t.equal( error.status, 500, 'equal status' );
+		t.equal( error.message, 'bad request', 'equal message' );
+		t.end();
+	}
+});
+
 tape( 'the function returns a JSON object upon attempting to resolve a file from one or more repositories', function test( t ) {
 	var resolve;
 	var opts;
